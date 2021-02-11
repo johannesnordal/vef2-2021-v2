@@ -9,6 +9,10 @@ const {
 
 const app = express();
 
+app.use((req, res) => {
+    res.send('Hello!');
+});
+
 // TODO setja upp rest af virkni!
 
 // Verðum að setja bara *port* svo virki á heroku

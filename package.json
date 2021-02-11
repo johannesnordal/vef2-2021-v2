@@ -1,5 +1,26 @@
 {
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "pg": "^8.5.1"
-  }
+  },
+  "name": "vef2-2021-v2",
+  "description": "Verkefni 2",
+  "version": "1.0.0",
+  "main": "./src/app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johannesnordal/vef2-2021-v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johannesnordal/vef2-2021-v2/issues"
+  },
+  "homepage": "https://github.com/johannesnordal/vef2-2021-v2#readme"
 }
