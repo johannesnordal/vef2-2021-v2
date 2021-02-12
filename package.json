@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/johannesnordal/vef2-2021-v2/issues"
   },
-  "homepage": "https://github.com/johannesnordal/vef2-2021-v2#readme"
+  "homepage": "https://github.com/johannesnordal/vef2-2021-v2#readme",
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "node-sass": "^5.0.0"
+  }
 }
