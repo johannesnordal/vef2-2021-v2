@@ -1,0 +1,51 @@
+<%- include('header') %>
+<form method="post" action="/register">
+
+  <div class="field<%= locals.isInvalid('name', data.errors) ?  ' field--invalid' : '' %>">
+    <label for="name">Nafn*</label>
+    <input type="text" name="name" id="name" value="<%= data.name %>" class="">
+  </div>
+
+  <div class="field<%= locals.isInvalid('nationalId', data.errors) ?  ' field--invalid' : '' %>">
+    <label for="nationalId">Kennitala*</label>
+    <input type="text" name="nationalId" id="nationalId" value="<%= data.nationalId %>" class="">
+  </div>
+
+  <div class="field">
+    <label for="comment">Athugasemd</label>
+    <textarea name="comment" id="comment"><%= data.comment%></textarea>
+  </div>
+
+  <div class="hide">
+    <% if(data.hide) { %>
+    <input type="checkbox" name="hide" id="hide" checked>
+    <% } else { %>
+    <input type="checkbox" name="hide" id="hide">
+    <% } %>
+    <label for="hide">Ekki birta á lista</label>
+  </div>
+
+  <% if (data.errors.length > 0) { %>
+    <h2>Villur við undirskrift:</h2>
+    <ul class="errors">
+      <% data.errors.forEach((error) => { %>
+        <li class="error"><label for="<%= error.param %>"><%= error.msg %></label></li>
+      <% }); %>
+    </ul>
+  <% } %>
+
+  <div class="button">
+    <button>Skrifa undir</button>
+  </div>
+</form>
+
+<hr>
+
+<h2>Undirskriftir</h2>
+<% if (data.signatures.length > 0) { %>
+<%- include('signatures', { signatures: data.signatures }) -%>
+<% } else { %>
+<p class="nosign">Engar undirskriftir.</p>
+<% } %>
+
+<%- include('footer') -%>

@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Dags</th>
+    <th>Nafn</th>
+    <th>Athugasemd</th>
+  </tr>
+  <% signatures.forEach(signature => { %>
+  <tr>
+    <td><%= locals.getDate(signature.signed) %></td>
+    <td><%= signature.anonymous === true ? 'Nafnlaus' : signature.name %></td>
+    <td><%= signature.comment %></td>
+  </tr>
+  <% }); %>
+</table>
