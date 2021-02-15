@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
@@ -19,8 +18,7 @@
     "test:eslint": "eslint ./src",
     "test:stylelint": "stylelint './public/styles.css'",
     "dev": "nodemon ./src/app.js",
-    "run-server": "node ./src/app.js",
-    "start": "npm run run-server",
+    "start": "node ./src/app.js",
     "setup": "node src/setup.js"
   },
   "repository": {
