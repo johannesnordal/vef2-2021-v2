@@ -22,7 +22,7 @@ pool.on('error', (err) => {
   process.exit(-1);
 });
 
-async function query(q, values = []) {
+export async function query(q, values = []) {
   const client = await pool.connect();
   try {
     const result = await client.query(q, values);
@@ -33,7 +33,7 @@ async function query(q, values = []) {
 }
 
 export async function select() {
-  const result = await query('SELECT * FROM signatures');
+  const result = await query('SELECT * FROM signatures ORDER BY signed DESC, id DESC');
   return result.rows;
 }
 

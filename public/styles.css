@@ -19,9 +19,9 @@ form {
 hr {
   max-width: 51%;
   border-top: 1px dotted black;
-  border-bottom: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .field {
@@ -31,38 +31,14 @@ hr {
   margin: 1rem;
 }
 
-.field label {
-  margin: 0.5rem 1rem;
-}
-
-.field input, .field textarea {
-  flex-grow: 2;
-  max-width: 800px;
-}
-
-.field--invalid input,
-.field--invalid textarea {
-  background-color: #fbb;
-}
-
-.hide {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.button {
-  text-align: center;
-  padding: 2rem;
-}
-
 button {
   font-size: 1.5rem;
   padding: 0.5rem;
   font-family: 'Merriweather', serif;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -75,7 +51,10 @@ h2 {
   font-size: 2.5rem;
 }
 
-table, th, tr, td{
+table,
+th,
+tr,
+td {
   border-collapse: collapse;
   border: 1px solid black;
 }
@@ -85,7 +64,8 @@ table {
   margin: 0 auto;
 }
 
-td, th {
+td,
+th {
   padding: 0.5rem;
 }
 
@@ -109,4 +89,30 @@ textarea {
 
 .nosign {
   text-align: center;
+}
+
+.field label {
+  margin: 0.5rem 1rem;
+}
+
+.field input,
+.field textarea {
+  flex-grow: 2;
+  max-width: 800px;
+}
+
+.field--invalid input,
+.field--invalid textarea {
+  background-color: #fbb;
+}
+
+.hide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button {
+  text-align: center;
+  padding: 2rem;
 }
