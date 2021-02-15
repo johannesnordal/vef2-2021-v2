@@ -32,8 +32,11 @@ hr {
 }
 
 button {
+  border: 1px solid #888;
+  border-radius: 10px;
+  background-color: #fff;
   font-size: 1.5rem;
-  padding: 0.5rem;
+  padding: 1rem;
   font-family: 'Merriweather', serif;
 }
 
